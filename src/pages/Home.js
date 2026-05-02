@@ -12,6 +12,7 @@ const rubros = [
   { icono: "🔒", nombre: "Cerrajero" },
   { icono: "🌿", nombre: "Jardinero" },
   { icono: "🖥️", nombre: "Tecnico PC" },
+  { icono: "🛠️", nombre: "Herrero" },
 ];
 
 function Home() {

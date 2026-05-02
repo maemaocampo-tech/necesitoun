@@ -12,6 +12,7 @@ const rubros = [
   "Cerrajero",
   "Jardinero",
   "Tecnico PC",
+  "Herrero",
 ];
 
 function RegistroTecnico() {
