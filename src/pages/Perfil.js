@@ -28,18 +28,18 @@ function Perfil() {
 cargar();
   }, [id]);
 
-  const cargarComentarios = async () => {
-    try {
-      const q = query(collection(db, "comentarios"), where("tecnicoId", "==", id));
-      const snapshot = await getDocs(q);
-      const lista = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-      setComentarios(lista);
-    } catch (error) {
-      console.error(error);
-    }
-  };
 useEffect(() => {
-    cargarComentarios(); // eslint-disable-line react-hooks/exhaustive-deps
+    const cargarComentarios = async () => {
+      try {
+        const q = query(collection(db, "comentarios"), where("tecnicoId", "==", id));
+        const snapshot = await getDocs(q);
+        const lista = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+        setComentarios(lista);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    cargarComentarios();
   }, [id]);
   const enviarComentario = async () => {
     if (!nuevoComentario.nombre || !nuevoComentario.texto) {
