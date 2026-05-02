@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const destacados = [
@@ -35,26 +35,28 @@ function Destacados() {
   const navigate = useNavigate();
   const [actual, setActual] = useState(0);
   const [animando, setAnimando] = useState(false);
+  const actualRef = useRef(0);
 
   const cambiar = (indice) => {
     setAnimando(true);
     setTimeout(() => {
       setActual(indice);
+      actualRef.current = indice;
       setAnimando(false);
     }, 300);
   };
 
   useEffect(() => {
     const intervalo = setInterval(() => {
-      cambiar((actual + 1) % destacados.length);
+      cambiar((actualRef.current + 1) % destacados.length);
     }, 4000);
     return () => clearInterval(intervalo);
-  }, [actual]);
+  }, []);
 
   const tecnico = destacados[actual];
 
   return (
-    <div className="mt-6">
+    <div className="mt-2">
       <p className="text-xs text-gray-400 mb-2 text-center">Tecnicos Destacados</p>
       <div
         onClick={() => navigate("/perfil/" + tecnico.id)}
@@ -64,10 +66,10 @@ function Destacados() {
         <div className="text-3xl">{tecnico.emoji}</div>
         <div className="flex-1">
           <p className="font-bold text-sm">{tecnico.nombre}</p>
-          <p className="text-xs opacity-80">{tecnico.rubro} · {tecnico.zona}</p>
+          <p className="text-xs opacity-80">{tecnico.rubro} - {tecnico.zona}</p>
         </div>
         <div className="text-right">
-          <p className="text-xs font-bold">⭐ {tecnico.calificacion}</p>
+          <p className="text-xs font-bold">Cal: {tecnico.calificacion}</p>
           <p className="text-xs opacity-70 mt-1">Ver perfil</p>
         </div>
       </div>
