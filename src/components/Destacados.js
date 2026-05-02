@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const destacados = [
   {
     id: 1,
-    nombre: "Carlos Garcia",
+    nombre: "Hector Toledo",
     rubro: "Electricista",
     emoji: "⚡",
     calificacion: 4.8,
@@ -13,9 +13,9 @@ const destacados = [
   },
   {
     id: 2,
-    nombre: "Juan Perez",
-    rubro: "Plomero",
-    emoji: "🔧",
+    nombre: "Emanuel Ocampo",
+    rubro: "Técnico de PC",
+    emoji: "🖥️",
     calificacion: 4.9,
     zona: "Belgrano",
     color: "#0066CC",
