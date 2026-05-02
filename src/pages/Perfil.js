@@ -38,12 +38,9 @@ cargar();
       console.error(error);
     }
   };
-
-// eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    cargarComentarios();
+useEffect(() => {
+    cargarComentarios(); // eslint-disable-line react-hooks/exhaustive-deps
   }, [id]);
-
   const enviarComentario = async () => {
     if (!nuevoComentario.nombre || !nuevoComentario.texto) {
       alert("Por favor completa tu nombre y comentario");
