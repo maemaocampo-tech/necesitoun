@@ -54,7 +54,7 @@ function Destacados() {
   }, []);
 
   const tecnico = destacados[actual];
-
+  console.log("actual:", actual, "tecnico:", tecnico);
   return (
     <div className="mt-2">
       <p className="text-xs text-gray-400 mb-2 text-center">Tecnicos Destacados</p>
