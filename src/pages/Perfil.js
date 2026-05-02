@@ -57,7 +57,10 @@ useEffect(() => {
         fecha: new Date().toISOString(),
       });
       setNuevoComentario({ nombre: "", estrellas: 5, texto: "" });
-      cargarComentarios();
+      const q = query(collection(db, "comentarios"), where("tecnicoId", "==", id));
+      const snapshot = await getDocs(q);
+      const lista = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+      setComentarios(lista);
     } catch (error) {
       alert("Error al enviar comentario");
     } finally {
