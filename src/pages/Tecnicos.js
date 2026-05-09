@@ -50,7 +50,7 @@ function Tecnicos() {
         <button onClick={() => navigate("/")} className="text-white text-xl">Volver</button>
         <div>
           <h1 className="text-xl font-bold">{rubro}</h1>
-          <p className="text-sm text-blue-200">Tecnicos disponibles</p>
+          <p className="text-sm text-blue-200">Profesionales disponibles</p>
         </div>
       </div>
 
