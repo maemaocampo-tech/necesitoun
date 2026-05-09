@@ -23,14 +23,14 @@ function Home() {
 <div className="bg-blue-600 text-white p-4 shadow">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold">Necesitoun 🛠️</h1>
-            <p className="text-sm text-blue-200">El tecnico que necesitas, cuando lo necesitas</p>
+            <h1 className="text-2xl font-bold">necesitoun 🛠️</h1>
+            <p className="text-sm text-blue-200">Un lugar, todos los oficios.</p>
           </div>
           <button
             onClick={() => navigate("/login-tecnico")}
             className="bg-white text-blue-600 text-xs font-bold rounded-xl px-3 py-2"
           >
-            Soy tecnico
+            Tengo un oficio
           </button>
         </div>
       </div>

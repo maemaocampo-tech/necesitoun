@@ -46,12 +46,10 @@ function Banner() {
       <p className="text-xs text-gray-400 mb-1 text-center">Publicidad</p>
       <div
         onClick={() => setModalAbierto(true)}
-        style={{ backgroundColor: anunciante.color, opacity: animando ? 0 : 1, transition: "opacity 0.3s ease", height: "160px" }}
+        style={{ backgroundColor: anunciante.color, opacity: animando ? 0 : 1, transition: "opacity 0.3s ease", height: "190px" }}
         className="cursor-pointer rounded-2xl shadow-lg text-white flex flex-col items-center justify-center gap-1 p-2"
       >
-        <div className="text-3xl">{anunciante.emoji}</div>
-        <p className="font-bold text-xs text-center">{anunciante.nombre}</p>
-        <p className="text-xs opacity-70 text-center">{anunciante.direccion}</p>
+        <p className="text-lg font-bold text-center leading-tight">Publicite Aqui !!</p>
       </div>
       <div className="flex justify-center gap-1 mt-1">
         {anunciantes.map((_, i) => (

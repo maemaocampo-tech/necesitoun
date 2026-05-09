@@ -19,14 +19,14 @@ function LoginTecnico() {
     <div className="min-h-screen bg-gray-100 flex flex-col">
       <div className="bg-blue-600 text-white p-4 shadow flex items-center gap-3">
         <button onClick={() => navigate("/")} className="text-white text-xl">Volver</button>
-        <h1 className="text-xl font-bold">Acceso Tecnicos</h1>
+        <h1 className="text-xl font-bold">Acceso para Trabajadores de oficio</h1>
       </div>
 
       <div className="flex-1 flex items-center justify-center p-6">
         <div className="bg-white rounded-2xl p-8 shadow w-full max-w-sm text-center">
           <div className="text-6xl mb-4">👷</div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Sos tecnico?</h2>
-          <p className="text-gray-500 text-sm mb-8">Registrate y aparece en NecesitoUn. Es gratis.</p>
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">Sos trabajador de oficio y queres registrarte?</h2>
+          <p className="text-gray-500 text-sm mb-8">Registrate y aparece en necesitoUn. Es gratis.</p>
           <button
             onClick={loginGoogle}
             className="w-full bg-white border-2 border-gray-200 rounded-2xl p-4 flex items-center justify-center gap-3 shadow hover:bg-gray-50 transition"
