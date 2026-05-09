@@ -19,6 +19,13 @@ function Admin() {
   const [recientes, setRecientes] = useState([]);
   const [vista, setVista] = useState("pendientes");
   const [cargando, setCargando] = useState(true);
+  useEffect(() => {
+  const autorizado = localStorage.getItem("admin");
+
+  if (autorizado !== "ok") {
+    navigate("/login-admin");
+  }
+}, [navigate]);
 
   const cargarPendientes = async () => {
     try {
