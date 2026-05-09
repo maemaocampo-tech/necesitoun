@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
-import { collection, getDocs, updateDoc, doc, query, where, orderBy, limit } from "firebase/firestore";
+import { collection, getDocs, updateDoc, doc, query, where } from "firebase/firestore";
 
 function Admin() {
   const navigate = useNavigate();
