@@ -69,13 +69,13 @@ useEffect(() => {
   };
 
   if (cargando) return <div className="p-6 text-center text-gray-400">Cargando...</div>;
-  if (!tecnico) return <div className="p-6 text-center text-gray-400">Tecnico no encontrado</div>;
+  if (!tecnico) return <div className="p-6 text-center text-gray-400">Profesional no encontrado</div>;
 
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="bg-blue-600 text-white p-4 shadow flex items-center gap-3">
         <button onClick={() => navigate(-1)} className="text-white text-xl">Volver</button>
-        <h1 className="text-xl font-bold">Perfil del tecnico</h1>
+        <h1 className="text-xl font-bold">Perfil del Profesionañ</h1>
       </div>
 
       <div className="p-6 flex flex-col gap-4">

@@ -26,12 +26,21 @@ function Home() {
             <h1 className="text-2xl font-bold">necesitoun 🛠️</h1>
             <p className="text-sm text-blue-200">Un lugar, todos los oficios.</p>
           </div>
-          <button
-            onClick={() => navigate("/login-tecnico")}
-            className="bg-white text-blue-600 text-xs font-bold rounded-xl px-3 py-2"
-          >
-            Tengo un oficio
-          </button>
+          <div className="flex items-center gap-2">
+
+  <div className="flex items-center text-yellow-300 font-bold text-sm animate-bounce">
+    ¡Sumate!
+    <span className="text-lg ml-1">➡</span>
+  </div>
+
+  <button
+    onClick={() => navigate("/login-tecnico")}
+    className="bg-white text-blue-600 text-xs font-bold rounded-xl px-3 py-2 shadow"
+  >
+    Tengo un oficio
+  </button>
+
+</div>
         </div>
       </div>
 
